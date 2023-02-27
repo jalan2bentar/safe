@@ -1,10 +1,10 @@
 var Base64 = {
 
-_keyStr: “ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=”,
+_keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
 
 encode: function (input) {
 
-     var output = “”;
+     var output = "";
 
      var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
 
@@ -50,7 +50,7 @@ encode: function (input) {
 
 decode: function (input) {
 
-     var output = “”;
+     var output = "";
 
      var chr1, chr2, chr3;
 
@@ -58,7 +58,7 @@ decode: function (input) {
 
      var i = 0;
 
-     input = input.replace(/[^A-Za-z0-9\+\/\=]/g, “”);
+     input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
 
      while (i < input.length) {
 
@@ -100,9 +100,9 @@ output = Base64._utf8_decode(output);
 
 _utf8_encode: function (string) {
 
-     string = string.replace(/\r\n/g, “\n”);
+     string = string.replace(/\r\n/g, "\n");
 
-     var utftext = “”;
+     var utftext = "";
 
      for (var n = 0; n < string.length; n++) {
 
@@ -136,7 +136,7 @@ var c = string.charCodeAt(n);
 
 _utf8_decode: function (utftext) {
 
-var string = “”;
+var string = "";
 
      var i = 0;
 
@@ -180,23 +180,23 @@ var string = “”;
 
 }
 
-var encode = document.getElementById(‘encode’),
+var encode = document.getElementById('encode'),
 
-decode = document.getElementById(‘decode’),
+decode = document.getElementById('decode'),
 
-output = document.getElementById(‘output’),
+output = document.getElementById('output'),
 
-input = document.getElementById(‘input’);
+input = document.getElementById('input');
 
-var User_ID = “”;
+var User_ID = "";
 
-var protected_links = “”;
+var protected_links = "";
 
 var a_to_va = 0;
 
 var a_to_vb = 0;
 
-var a_to_vc = “”;
+var a_to_vc = "";
 
 function auto_safelink() {
 
@@ -208,23 +208,23 @@ function auto_safeconvert() {
 
 var a_to_vd = window.location.hostname;
 
-if (protected_links != “” && !protected_links.match(a_to_vd)) {
+if (protected_links != "" && !protected_links.match(a_to_vd)) {
 
-     protected_links += “, ” + a_to_vd;
+     protected_links += ", " + a_to_vd;
 
-} else if (protected_links == “”) {
+} else if (protected_links == "") {
 
      protected_links = a_to_vd;
 
 }
 
-var a_to_ve = “”;
+var a_to_ve = "";
 
 var a_to_vf = new Array();
 
 var a_to_vg = 0;
 
-a_to_ve = document.getElementsByTagName(“a”);
+a_to_ve = document.getElementsByTagName("a");
 
 a_to_va = a_to_ve.length;
 
@@ -236,7 +236,7 @@ var a_to_vh = false;
 
 var j = 0;
 
-var a_to_vi = “”;
+var a_to_vi = "";
 
 for (var i = 0; i < a_to_va; i++) {
 
@@ -248,7 +248,7 @@ for (var i = 0; i < a_to_va; i++) {
 
          a_to_vi = a_to_ve[i].href;
 
-         if (a_to_vi.match(a_to_vf[j]) || !a_to_vi || !a_to_vi.match(“http”)) {
+         if (a_to_vi.match(a_to_vf[j]) || !a_to_vi || !a_to_vi.match("http")) {
 
                 a_to_vh = true;
 
@@ -262,21 +262,21 @@ if (a_to_vh == false) {
 
          var encryptedUrl = Base64.encode(a_to_vi);
 
-            a_to_ve[i].href = “http://website-anda.com/safelink.html?url=” + encryptedUrl;
+            a_to_ve[i].href = "http://jobnas.com/safelink?url=" + encryptedUrl;
 
-            a_to_ve[i].rel = “nofollow”;
+            a_to_ve[i].rel = "nofollow";
 
          a_to_vb++;
 
-         a_to_vc += i + “:::” + a_to_ve[i].href + “\n”;
+         a_to_vc += i + ":::" + a_to_ve[i].href + "\n";
 
      }
 
 }
 
-var a_to_vj = document.getElementById(“anonyminized”);
+var a_to_vj = document.getElementById("anonyminized");
 
-var a_to_vk = document.getElementById(“found_links”);
+var a_to_vk = document.getElementById("found_links");
 
 if (a_to_vj) {
 
@@ -296,9 +296,9 @@ function a_to_fa() {
 
 var a_to_vf = new Array();
 
-protected_links = protected_links.replace(” “, “”);
+protected_links = protected_links.replace(" ", "");
 
-a_to_vf = protected_links.split(“,”);
+a_to_vf = protected_links.split(",");
 
 return a_to_vf;
 
